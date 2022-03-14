@@ -16,21 +16,31 @@
 </head>
 
 <body>
-  <div class="navbar bg-dark justify-content-start">
-    <div class="col-xl-4 col-md-12">
-      <a href="index.html" class="header"><h1 id="header">SINI BED & BREAKFAST</h1></a>
+  
+  <nav class="navbar navbar-expand-lg navbar-light" id="navbar">
+    <div class="container">
+      <div class="col-7">
+        <a href="index.html" class="header"><h1 id="header">SINI BED & BREAKFAST</h1></a>
+      </div>
+
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="col-5 collapse navbar-collapse" id="navbarMenu">
+        <ul class="navbar-nav navbar-custom">
+          <a href="/" class="navLink">Home</a>
+          <a href="guestbook" class="navLink">Guestbook</a>
+          <a href="newmessage" class="navLink">New Message</a>
+          <a href="ajaxmessage" class="navLink">AJAX MESSAGE</a>
+        </ul>
+      </div>
     </div>
-    <div class="col-xl-8 col-md-12">
-      <a href="/" class="navLink">Home</a>
-      <a href="guestbook" class="navLink">Guestbook</a>
-      <a href="newmessage" class="navLink">New Message</a>
-      <a href="ajaxmessage" class="navLink">AJAX MESSAGE</a>
-    </div>
-  </div>
+  </nav>
   
   <div class="container">
     <div class="row justify-content-center">
-      <h1 style="color: bisque">AJAX message</h1>
+      <h1 style="color: whitesmoke">AJAX message</h1>
     </div>
     <div class="row justify-content-center">
       <form id="newMessageForm">
@@ -72,6 +82,16 @@
   </div>
   
 	<script src="script.js"></script>
+  <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
 </body>
 
 </html>
