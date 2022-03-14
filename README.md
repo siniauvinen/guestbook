@@ -23,4 +23,4 @@ A list of technologies that were used to create the project.
 
 ### Installation
 ***
-No special requirements. Guestbook webpage is run on any browser and can befound from 
+No special requirements. Guestbook webpage is run on any browser and can befound from http://guestbook-project.herokuapp.com/

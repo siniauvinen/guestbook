@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(57, 57, 98);
+    background-color: rgb(60, 74, 102);
 }
 
 /* NAVIGAATIO */
@@ -19,6 +19,7 @@ body {
     color:bisque;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
 .header:hover {
     text-decoration: none;
