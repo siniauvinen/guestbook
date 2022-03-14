@@ -1,0 +1,59 @@
+body {
+    background-color: rgb(57, 57, 98);
+}
+
+/* NAVIGAATIO */
+.navbar {
+    margin-bottom: 30px;
+}
+.navLink {
+    color:white;
+    padding:10px;
+}
+.navLink:hover {
+    color:bisque;
+    text-decoration: none;
+    background-color: rgb(67, 95, 81);
+}
+#header {
+    color:bisque;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 20px;
+}
+.header:hover {
+    text-decoration: none;
+}
+
+/* HOMEPAGE */
+.container-fluid {
+    width: 95%;
+    height: 100%;
+}
+#sidebar {
+    float:left;
+}
+#bicycle {
+    max-height: 250px;
+    width: auto;
+}
+
+/* NEW MESSAGE */
+#newMessageForm {
+    margin-top: 20px;
+    width: 70%;
+    align-items: center;
+}
+.form-control {
+    background-color: whitesmoke;
+}
+
+/* AJAX MESSAGE */
+
+.ajaxtable{
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+
+
+
