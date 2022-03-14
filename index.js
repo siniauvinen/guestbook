@@ -114,6 +114,7 @@ app.post("/ajaxmessage", (req, res) => {
       message: req.body.messageAjax,
     });
   }
+  
 
   var jsonStr = JSON.stringify(data);
   fs.writeFile(__dirname + "/guestbookdata.json", jsonStr, (err) => {
