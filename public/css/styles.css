@@ -25,6 +25,9 @@ body {
 .header:hover {
     text-decoration: none;
 }
+.navbar-toggler{
+    background-color: rgb(231, 231, 229);
+}
 
 
 /* HOMEPAGE */
