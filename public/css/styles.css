@@ -5,6 +5,7 @@ body {
 /* NAVIGAATIO */
 .navbar {
     margin-bottom: 30px;
+    background-color: rgb(52, 58, 64);
 }
 .navLink {
     color:white;

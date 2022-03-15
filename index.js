@@ -16,7 +16,7 @@ app.get("/", function (req, res) {
 app.get("/guestbook", function (req, res) {
   var data = require("./guestbookdata.json");
   var results =
-    '<body style="background-color:rgb(57, 57, 98)">' +
+    '<body style="background-color:rgb(60, 74, 102)">' +
     '<h1 style="color: bisque">Guestbook</h1>' +
     "<table>" +
     '<tr style="background-color:rgb(52, 58, 64)">' +
@@ -93,7 +93,7 @@ app.post("/newmessage", function (req, res) {
     if (err) throw err;
   });
   res.send(
-    '<body style="background-color:rgb(57, 57, 98)";><h3 style="color:whitesmoke;">Saved data to a file. Guestbook can be found <a href="http://localhost:8081/guestbook" style="color:whitesmoke;"> here. </a><h3></body>'
+    '<body style="background-color:rgb(60, 74, 102)";><h3 style="color:whitesmoke;">Saved data to a file. Guestbook can be found <a href="guestbook" style="color:whitesmoke;"> here. </a><h3></body>'
   );
 });
 
