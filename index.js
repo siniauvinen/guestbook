@@ -76,7 +76,7 @@ app.post("/newmessage", function (req, res) {
     req.body.message === ""
   ) {
     res.send(
-      '<body style="background-color:rgb(57, 57, 98)";><h3 style="color:whitesmoke;">You must fill all the input fields to be able to submit. <a href="http://localhost:8081/newmessage" style="color:whitesmoke;"> Go back. </a><h3></body>'
+      '<body style="background-color:rgb(60, 74, 102)";><h3 style="color:whitesmoke;">You must fill all the input fields to be able to submit. <a href="newmessage" style="color:whitesmoke;"> Go back. </a><h3></body>'
     );
     return;
   }
