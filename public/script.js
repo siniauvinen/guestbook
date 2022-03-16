@@ -25,13 +25,11 @@ $(document).ready(function () {
       if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
         var response = xmlhttp.responseText
         document.getElementById('feedback').innerHTML = response
-        console.log("feedback innerHTML set to:" + response);
       }
     }
 
     xmlhttp.open("POST", "/ajaxmessage", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-for-urlencoded");
-    // xmlhttp.setRequestHeader("Content-type", "text/plain");
     xmlhttp.send();
   });
 });

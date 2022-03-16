@@ -65,7 +65,6 @@ app.get("/newmessage", function (req, res) {
 
 // Mahdollistaa lomakkeen tietojen luvun ja lähettämisen JSONiin
 var bodyParser = require("body-parser");
-const { waitForDebugger } = require("inspector");
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post("/newmessage", function (req, res) {
@@ -118,16 +117,9 @@ app.post("/ajaxmessage", (req, res) => {
   
   var jsonStr = JSON.stringify(data);
 
-
   fs.writeFileSync(__dirname + "/guestbookdata.json", jsonStr, (err) => {
     if (err) throw err;
   });
-
-  // var data = require("./guestbookdata.json");
-  // var data = ReadGuestBookData();
-  // function ReadGuestBookData(){
-  //   return JSON.parse(fs.readFileSync(__dirname + "/guestbookdata.json", "utf-8"))
-  // }
 
   var results =
     '<body style="background-color:rgb(57, 57, 98)">' +
