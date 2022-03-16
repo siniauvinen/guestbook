@@ -117,7 +117,7 @@ app.post("/ajaxmessage", (req, res) => {
   
 
   var jsonStr = JSON.stringify(data);
-  fs.writeFile(__dirname + "/guestbookdata.json", jsonStr, (err) => {
+  fs.writeFileSync(__dirname + "/guestbookdata.json", jsonStr, (err) => {
     if (err) throw err;
   });
 
