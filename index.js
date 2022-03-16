@@ -128,7 +128,7 @@ app.post("/ajaxmessage", (req, res) => {
   // var data = require("./guestbookdata.json");
   var data = ReadGuestBookData();
   function ReadGuestBookData(){
-    return JSON.parse(fs.readFileSync("./guestbookdata.json", "utf-8"))
+    return JSON.parse(fs.readFileSync(__dirname + "/guestbookdata.json", "utf-8"))
   }
 
   var results =
