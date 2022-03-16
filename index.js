@@ -115,13 +115,14 @@ app.post("/ajaxmessage", (req, res) => {
     });
   }
   
-
+// addede here sync after writeFile
   var jsonStr = JSON.stringify(data);
   fs.writeFileSync(__dirname + "/guestbookdata.json", jsonStr, (err) => {
     if (err) throw err;
   });
 
-  var data = require("./guestbookdata.json");
+  // var data = require("./guestbookdata.json");
+  var data = JSON.parse(fs.readFileSync("./guestbookdata.json"))
   var results =
     '<body style="background-color:rgb(57, 57, 98)">' +
     "<table class='ajaxtable'>" +
