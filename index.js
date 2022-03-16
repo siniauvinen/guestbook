@@ -117,15 +117,20 @@ app.post("/ajaxmessage", (req, res) => {
   }
   
   var jsonStr = JSON.stringify(data);
-  fs.writeFileSync(__dirname + "/guestbookdata.json", jsonStr, (err) => {
-    if (err) throw err;
-  });
- 
+
+  WriteGuestBookData(jsonStr);
+  function WriteGuestBookData(jsonStr){
+    fs.writeFileSync(__dirname + "/guestbookdata.json", jsonStr, (err) => {
+      if (err) throw err;
+    });
+  }
+
   // var data = require("./guestbookdata.json");
   var data = ReadGuestBookData();
   function ReadGuestBookData(){
     return JSON.parse(fs.readFileSync("./guestbookdata.json", "utf-8"))
   }
+
   var results =
     '<body style="background-color:rgb(57, 57, 98)">' +
     "<table class='ajaxtable'>" +
