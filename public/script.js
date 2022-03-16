@@ -23,8 +23,9 @@ $(document).ready(function () {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
       if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-        var testi = xmlhttp.responseText
-        document.getElementById('feedback').innerHTML = testi
+        var response = xmlhttp.responseText
+        document.getElementById('feedback').innerHTML = response
+        console.log("feedback innerHTML set to:");
       }
     }
 
