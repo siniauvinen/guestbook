@@ -12,50 +12,9 @@ app.get("/", function (req, res) {
   res.sendFile(__dirname + "/public/home.html");
 });
 
-///// GUESTBOOK SIVU. Lukee JSON tiedoston taulukkoon
+///// GUESTBOOK SIVU. Lukee JSON tiedoston taulukkoon.
 app.get("/guestbook", function (req, res) {
-  var data = require("./guestbookdata.json");
-  var results =
-    '<body style="background-color:rgb(60, 74, 102)">' +
-    '<h1 style="color: bisque">Guestbook</h1>' +
-    "<table>" +
-    '<tr style="background-color:rgb(52, 58, 64)">' +
-    '<td><h3 style="color:rgb(233, 240, 242)">' +
-    "Username" +
-    "</td></h3>" +
-    '<td><h3 style="color:rgb(233, 240, 242)">' +
-    "Country" +
-    "</td></h3>" +
-    '<td><h3 style="color:rgb(233, 240, 242)">' +
-    "Message" +
-    "</td></h3>" +
-    "</tr>" +
-    "</body>";
-
-  for (var i = 0; i < data.length; i++) {
-    results +=
-      "<tr>" +
-      "<td style='background-color:rgb(233, 240, 242)'>" +
-      data[i].username +
-      "</td>" +
-      "<td style='background-color:rgb(206, 216, 219)'>" +
-      data[i].country +
-      "</td>" +
-      "<td style=' background-color:rgb(233, 240, 242)'>" +
-      data[i].message +
-      "</td>" +
-      "</tr>";
-  }
-
-  navigaatio =
-    '<div class="navbar">' +
-    '<a href="/" style="color:white">Home </a>' +
-    '<a href="guestbook" style="color:white">GUESTBOOK </a>' +
-    '<a href="newmessage" style="color:white">New Message </a>' +
-    '<a href="ajaxmessage" style="color:white">Ajax Message</a>' +
-    "</div>";
-
-  res.send(navigaatio + results);
+  res.sendFile(__dirname + "/public/guestbook.html");
 });
 
 ///// NEW MESSAGE SIVU. Käyttäjä voi kirjoittaa uuden viestin, joka talletetaan JSONiin.
@@ -153,6 +112,12 @@ app.post("/ajaxmessage", (req, res) => {
   }
   res.send(results);
 });
+
+///// JSON DATA HOLDER
+app.get("/guestbookdata", function (req, res) {
+  var jsondata = require("./guestbookdata.json");
+  res.send(jsondata)
+})
 
 ///// NOT FOUND SIVU
 app.get("*", function (req, res) {

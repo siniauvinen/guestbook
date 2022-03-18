@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light" id="navbar">
+      <div class="container">
+        <div class="col-7">
+          <a href="index.html" class="header"><h1 id="header">SINI BED & BREAKFAST</h1></a>
+        </div>
+
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="col-5 collapse navbar-collapse" id="navbarMenu">
+          <ul class="navbar-nav navbar-custom">
+            <a href="/" class="navLink">Home</a>
+            <a href="guestbook" class="navLink">GUESTBOOK</a>
+            <a href="newmessage" class="navLink">New message</a>
+            <a href="ajaxmessage" class="navLink">Ajax Message</a>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row justify-content-center">
+        <table class="table table-striped borderless">
+          <thead class="thead-dark">
+            <tr>
+              <th>Username</td>
+              <th>Country</td>
+              <th>Message</td>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </div>
+
+<script src="guestbook.js"></script>
+</body>
+</html>

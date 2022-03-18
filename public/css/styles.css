@@ -43,6 +43,24 @@ body {
     width: auto;
 }
 
+/* GUESTBOOK */
+
+.table {
+    width: 70%;
+    margin-bottom: 30px;
+}
+@media only screen and (max-width: 800px) {
+    .table {
+        width: 90%;
+    }
+  }
+#tbody{
+    background-color: rgb(225, 226, 225);
+}
+.borderless td, .borderless th {
+    border: none;
+}
+
 /* NEW MESSAGE */
 #newMessageForm {
     margin-top: 20px;
